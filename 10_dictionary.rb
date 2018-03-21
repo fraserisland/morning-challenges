@@ -19,7 +19,19 @@
 # Check your solution by running the tests:
 # ruby tests/10_dictionary_test.rb
 #
+#
+# class Dictionary
+#
+# end
 
-class Dictionary
-  # Your code here
+  dictionary= {}
+
+def add_word(word, definition)
+  dictionary[(word.to_s)] = definition
+end
+
+add_word("taco", "yummy")
+
+dictionary.each do |x,y|
+  puts "#{x} : #{y}"
 end

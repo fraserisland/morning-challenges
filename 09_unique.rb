@@ -18,6 +18,17 @@
 # ruby tests/09_unique_test.rb
 #
 
+
+#-push each element into a hash -
+#push values into hash with value -
+#if value is  > 1 dont put anything
+
 def unique (mylist)
-  # Your code here
+  hash={}
+  uni=[]
+  mylist.each{|y| hash[y]= y+1}
+  hash.map{|x,y| uni.push(x)}
+  return uni
 end
+
+unique([1,2,3,3])
