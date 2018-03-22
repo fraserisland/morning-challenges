@@ -23,15 +23,3 @@
 # class Dictionary
 #
 # end
-
-  dictionary= {}
-
-def add_word(word, definition)
-  dictionary[(word.to_s)] = definition
-end
-
-add_word("taco", "yummy")
-
-dictionary.each do |x,y|
-  puts "#{x} : #{y}"
-end
