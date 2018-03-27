@@ -15,9 +15,7 @@
 #
 
 def count_letters (string)
-  result = {} # You'll need an empty hash to get started!
-
+string.scan(/\w/).inject(Hash.new(0)){|h, c| c[h] += 1; h}
   # Your code here
-  
-  result # return the hash
+  return string # return the hash
 end
