@@ -23,5 +23,11 @@
 #
 
 def ExesAndOhs(string)
-  # yo' co' here
+  string.downcase.split(//).count('x') == string.downcase.split(//).count('o')? true : false
 end
+
+
+
+#- string.split them up
+#- push each into a hash with count
+#- if hash[x] == hash[o] return true else false
