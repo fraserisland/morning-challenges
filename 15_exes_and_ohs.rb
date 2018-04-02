@@ -20,10 +20,10 @@
 #
 # Check your answers by running the tests:
 # ruby tests/15_exes_and_ohs_test.rb
-#
+
 
 def ExesAndOhs(string)
-  string.downcase.split(//).count('x') == string.downcase.split(//).count('o')? true : false
+  string.downcase.count('x') == string.downcase.count('o')? true : false
 end
 
 
