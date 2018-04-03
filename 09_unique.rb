@@ -30,5 +30,3 @@ def unique (mylist)
   hash.map{|x,y| uni.push(x)}
   return uni
 end
-
-unique([1,2,3,3])
