@@ -61,6 +61,7 @@
 # end
 
 class Players
+
     attr_accessor :name, :hp, :damage
     def initialize(name, hp, damage)
         @name = name
@@ -70,20 +71,23 @@ class Players
 
     def attack(opposite_player)
         until self.hp < 1 || opposite_player.hp < 1
-          puts "#{self.name} attacks #{opposite_player.name}!"
-          self.hp -= rand(@damage)
-          puts "#{opposite_player.name}'s hp: #{opposite_player.hp}"
+          x = rand(@damage)
+          puts "#{self.name} attacks #{opposite_player.name} with #{x}!"
+          self.hp -= x
 
-          puts "#{opposite_player.name} attacks #{self.name}!"
-          opposite_player.hp -= rand(@damage)
-          puts "#{self.name}'s hp: #{self.hp}"
+          y = rand(@damage)
+          puts "#{opposite_player.name} attacks #{self.name} with #{y}!"
+          opposite_player.hp -= y
+
+          puts "#{self.name}'s hp: #{self.hp} | #{opposite_player.name}'s hp: #{opposite_player.hp}"
           if self.hp <= 0
-             puts "#{self.name} wins"
-           elsif opposite_player.hp <= 0
              puts "#{opposite_player.name} wins"
+           elsif opposite_player.hp <= 0
+             puts "#{self.name} wins"
            else
              "Next Round!"
           end
+sleep 0.5
         end
     end
 end
