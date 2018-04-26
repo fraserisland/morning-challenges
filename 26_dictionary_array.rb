@@ -21,8 +21,42 @@
 #
 # Check your solution by running the tests:
 # ruby tests/26_dictionary_array_test.rb
-#
+
 
 class Dictionary
-  # Your code here
+  attr_accessor :definition, :word
+  def initialize
+    @dictionary = []
+    @word = word
+    @definition = definition
+  end
+
+  def add_word(word, definition)
+      @dictionary.push([word, definition])
+  end
+
+  def lookup(word)
+       @dictionary.each do |definitions|
+         if definitions[0] == word
+           return definitions[1]
+         else return "no match"
+       end
+     end
+  end
+
+  def total_words
+    return @dictionary.length
+  end
+
+  def all_words
+     @dictionary.each{|hey,you| return "#{hey}: #{you}"}
+  end
+
 end
+
+
+dictionary = Dictionary.new
+dictionary.add_word("word", "definition")
+puts dicitonary.total_words
+puts dictionary.all_words
+puts dicitonary.lookup("word")
