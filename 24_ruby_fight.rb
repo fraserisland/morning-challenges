@@ -15,6 +15,8 @@
 # the maximum health value for a player is 200, and the maximum power value is 25) and call the fight method.
 
 
+
+
 class Players
 
     attr_accessor :name, :hp, :damage
@@ -26,6 +28,8 @@ class Players
 
     def attack(opposite_player)
         until self.hp < 1 || opposite_player.hp < 1
+          system("clear")
+          puts "THIS IS THE BATTLE TO THE DEATH LEZ GO!!"
           x = rand(@damage)
           puts "#{self.name} attacks #{opposite_player.name} with #{x}!"
           self.hp -= x
@@ -36,9 +40,9 @@ class Players
 
           puts "#{self.name}'s hp: #{self.hp} | #{opposite_player.name}'s hp: #{opposite_player.hp}"
           if self.hp <= 0
-             puts "#{opposite_player.name} wins"
+             puts "#{(opposite_player.name).upcase} WINS!!!!!!"
            elsif opposite_player.hp <= 0
-             puts "#{self.name} wins"
+             puts "#{(self.name).upcase} WINS!!!!!!"
            else
              "Next Round!"
           end
