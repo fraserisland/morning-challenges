@@ -28,7 +28,9 @@ class Players
 
     def attack(opposite_player)
         until self.hp < 1 || opposite_player.hp < 1
-          system("clear")
+          puts "---press 'a' to attack-----"
+          if gets.chomp! == "a"
+
           puts "THIS IS THE BATTLE TO THE DEATH LEZ GO!!"
           x = rand(@damage)
           puts "#{self.name} attacks #{opposite_player.name} with #{x}!"
@@ -37,8 +39,12 @@ class Players
           y = rand(@damage)
           puts "#{opposite_player.name} attacks #{self.name} with #{y}!"
           opposite_player.hp -= y
-
           puts "#{self.name}'s hp: #{self.hp} | #{opposite_player.name}'s hp: #{opposite_player.hp}"
+
+        else
+          puts "incorrect input!"
+        end
+
           if self.hp <= 0
              puts "#{(opposite_player.name).upcase} WINS!!!!!!"
            elsif opposite_player.hp <= 0
@@ -61,4 +67,3 @@ jerry = Player1.new("Jerry", 200, 30)
 billy = Player2.new("Billy", 200, 30)
 
 jerry.attack(billy)
-billy.attack(jerry)
