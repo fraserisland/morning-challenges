@@ -1,0 +1,25 @@
+{
+  "name": "morning-challenges",
+  "version": "1.0.0",
+  "description": "Morning challenge whitelist",
+  "main": "pick.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha pick"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fraserisland/morning-challenges.git"
+  },
+  "author": "fraser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fraserisland/morning-challenges/issues"
+  },
+  "homepage": "https://github.com/fraserisland/morning-challenges#readme",
+  "dependencies": {
+    "underscore": "^1.9.0"
+  }
+}
